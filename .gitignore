@@ -8,10 +8,3 @@ target
 local.properties
 *.lock
 src/test/
-build.gradle.kts
-docker-compose.yml
-gradle.properties
-gradle/
-gradlew
-gradlew.bat
-settings.gradle
