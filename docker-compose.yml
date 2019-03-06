@@ -1,0 +1,20 @@
+boot-grafana:
+  image: grafana/grafana:6.0.0
+  ports:
+    - 3000:3000
+  links:
+    - boot-influxdb
+  volumes:
+    - /var/lib/grafana
+  environment:
+    GF_SECURITY_ADMIN_PASSWORD: admin
+boot-influxdb:
+  image: influxdb:1.7.3
+  ports:
+    - 8086:8086
+  volumes:
+    - /var/lib/influxdb
+  environment:
+    INFLUXDB_USER: user
+    INFLUXDB_USER_PASSWORD: pass
+    INFLUXDB_DB: boot
